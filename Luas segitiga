@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<title>Tugas</title>
+	</head>
+	<body>
+		<table>
+		<form action="" method="post" name="input">
+		<tr>
+			<td>Nilai Alas : </td>
+			<td><input type="text" name="a"></td>
+		</tr>
+		<tr>
+			<td>Nilai tinggi : </td>
+			<td><input type="text" name="t"></td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center><input type="submit" name="hitung" value="Hitung"></td>
+		</tr>
+		</form>
+		</table>
+	</body>
+</html>
+
+<?php
+	if(isset($_POST['hitung'])){
+		$alas=$_POST['a'];
+		$tinggi=$_POST['t'];
+		
+		function luas($alas,$tinggi){
+			$l=0.5*$alas*$tinggi;
+			return $l;
+		}
+		echo "Luas Segitiga : ".luas($alas,$tinggi);
+	}
+	?>
